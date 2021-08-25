@@ -1,0 +1,208 @@
+@import 'src/styles';
+
+#hero {
+    background-image: url('../../../assets/img/backgrounds/bg_hero.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    position: relative;
+    top: -150px;
+    z-index: 100;
+
+    .hero-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+
+        &__title {
+            color: $white;
+        }
+    }
+}
+
+#history {  
+    margin-bottom: 158px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .history-content {
+        width: 60%;
+        text-align: center;
+
+        &__title, &__text {
+            color: $gray-1;
+            padding: 20px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+}
+
+#developers {
+    background-image: url('../../../assets/img/backgrounds/bg_dev.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 1000px;
+
+    .developer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+
+        &__title {
+            color: $white;
+        }
+    }
+}
+
+#contact {
+    padding: 130px 0 156px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact-content {
+        width: 60%;
+        text-align: center;
+
+        &__title, &__text {
+            color: $gray-1;
+            padding: 20px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+}
+
+#form {
+    background-image: url('../../../assets/img/backgrounds/bg_form_desk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 1100px;
+
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 1100px;
+
+        &__title {
+            color: $white;
+        }
+
+        &__form {
+            border: 1px solid $white;
+            border-radius: 80px;
+            padding: 90px;
+            width: 30%;
+            margin-top: 100px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+
+                label {
+                    font-family: $got-b;
+                    color: $white;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                input {
+                    background-color: rgba($white, 0.5);
+                    border: transparent;
+                    padding: 20px 10px 14px;
+                    border-radius: 15px;
+                    color: $white;
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                
+            }
+            .form-checkbox {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    &:focus + label:before {
+                        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+                    }
+                    &:checked + label:before {
+                        background-color: $white;
+                    }
+                    &:checked + label:after {
+                        content: '';
+                        position: absolute;
+                        left: 6px;
+                        top: 10px;
+                        background-color: $primary;
+                        width: 2px;
+                        height: 2px;
+                        box-shadow: 
+                          2px 0 0 $primary,
+                          4px 0 0 $primary,
+                          4px -2px 0 $primary,
+                          4px -4px 0 $primary,
+                          4px -6px 0 $primary,
+                          4px -8px 0 $primary;
+                        transform: rotate(45deg);
+                      }
+                }
+
+                label {
+                    font-family: $got-b;
+                    color: $white;
+                    position: relative;
+                    cursor: pointer;
+                    padding: 0;
+
+                    &::before {
+                        content: '';
+                        margin-right: 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 20px;
+                        height: 20px;
+                        background-color: transparent;
+                        border: 1px solid $white;
+                    }
+                }
+            }
+            .form-send {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    color: $white;
+                    flex: 2;
+                }
+
+                button {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
