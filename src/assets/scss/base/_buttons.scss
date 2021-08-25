@@ -1,7 +1,6 @@
 .button {
-    background-color: $secondary;
+    background-color: transparent;
     border: transparent;
-    color: $white;
     cursor: pointer;
     font-family: $got-b;
     font-size: 1rem;
@@ -10,7 +9,10 @@
     margin: 0.5rem;
     border-radius: 11px;
     transition: all .2s linear;
-    &:hover {
-        background-color: $secondary-hover;
+
+    &.button-send {
+        background-color: $white;
+        color: $gray-1;
     }
+    
 }
