@@ -35,30 +35,87 @@
         <h2 class="form-content__title">
             Form
         </h2>
-        <form class="form-content__form">
+        <form
+        class="form-content__form"
+        [formGroup]="formContact"
+        (ngSubmit)="onSubmit()"
+        >   
             <div class="form-group">
                 <label for="name">Nombre *</label>
-                <input type="text" id="name">
+                <input 
+                formControlName="name"
+                type="text" 
+                id="name">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">
+                        <small class="errors">
+                            <sup>*</sup>El campo Nombre es requerido
+                        </small>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="lastName">Apellido *</label>
-                <input type="text" id="lastName">
+                <input 
+                formControlName="lastName"
+                type="text" 
+                id="lastName">
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">
+                        <small class="errors">
+                            <sup>*</sup>El campo Apellido es requerido
+                        </small>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Correo *</label>
-                <input type="email" id="email">
+                <input 
+                formControlName="email"
+                type="email" 
+                id="email">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">
+                        <small class="errors">
+                            <sup>*</sup>El campo Correo es requerido
+                        </small>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="birthdate">Fecha de nacimiento *</label>
-                <input type="date" id="birthdate">
+                <input 
+                formControlName="birthdate"
+                type="date" 
+                id="birthdate">
+                <div *ngIf="submitted && f.birthdate.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">
+                        <small class="errors">
+                            <sup>*</sup>El campo Fecha es requerido
+                        </small>
+                    </div>
+                </div>
             </div>
             <div class="form-checkbox">
-                <input id="terms" type="checkbox">
+                <input 
+                formControlName="terms"
+                id="terms" 
+                type="checkbox">
                 <label for="terms">Acepto terminos y condiciones*</label>
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">
+                        <small class="errors">
+                            <sup>*</sup>Debes aceptar los terminos y condiciones
+                        </small>
+                    </div>
+                </div>
             </div>
             <div class="form-send">
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                <button type="submit" class="button button-send">Enviar</button>
+                <button
+                class="button button-send">
+                    Enviar
+                </button>
             </div>
         </form>
     </div>
