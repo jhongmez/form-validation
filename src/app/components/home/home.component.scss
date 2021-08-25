@@ -9,6 +9,23 @@
     position: relative;
     top: -150px;
     z-index: 100;
+    &::after{
+        content: url('../../../assets/img/icons/ic_arrowDown.svg');
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -70%);
+        -webkit-animation: slide-top 1.2s infinite alternate;
+	    animation: slide-arrow 1.2s infinite alternate;
+        @keyframes slide-arrow {
+            0% {
+              top: 70%;
+            }
+            100% {
+              top: 80%;
+            }
+        }
+    }
 
     .hero-content {
         display: flex;
