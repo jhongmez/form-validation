@@ -1,0 +1,32 @@
+@import 'src/styles';
+
+header {
+    background-color: transparent;
+    padding: 1rem;
+    position: relative;
+    z-index: 200;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-logo {
+            &__img {
+                width: 75px;
+                height: 75px;
+                object-fit: contain;
+            }
+        }
+        .navbar-options {
+
+            &__list {
+                display: flex;
+                flex-direction: row;
+
+                .list-link {
+                    color: $white;
+                }
+            }
+
+        }
+    }
+}
