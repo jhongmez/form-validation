@@ -1,0 +1,25 @@
+@import 'src/styles';
+
+footer {
+    background-color: $gray-3;
+    
+    .footer-content {
+        height: 360px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+            color: $white;
+            font-size: 18px;
+        }
+
+        &__img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+    }
+}
