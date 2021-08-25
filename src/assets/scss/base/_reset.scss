@@ -10,7 +10,6 @@
 
  html {
 	-webkit-text-size-adjust: 100%; /* 2 */
-  line-height: 1.1em;
   scroll-behavior: smooth;
 }
   
@@ -56,6 +55,7 @@ h1, h2, h3, h4 {
 
 p {
   margin: 0;
+  line-height: 1.1em;
 }
   
 /* Grouping content

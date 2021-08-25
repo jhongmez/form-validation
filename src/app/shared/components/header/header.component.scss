@@ -9,6 +9,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
         .navbar-logo {
             &__img {
                 width: 75px;
@@ -17,6 +20,9 @@ header {
             }
         }
         .navbar-options {
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             &__list {
                 display: flex;
