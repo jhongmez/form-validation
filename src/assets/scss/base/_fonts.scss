@@ -19,3 +19,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url('../../fonts/Gotham-Rounded-Bold.eot');
+	src: local('☺'), 
+    url('../../fonts/Gotham-Rounded-Bold.woff') format('woff'), 
+    url('../../fonts/Gotham-Rounded-Bold.ttf') format('truetype'), 
+    url('../../fonts/Gotham-Rounded-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
