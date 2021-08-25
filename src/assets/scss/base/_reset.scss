@@ -9,8 +9,8 @@
  */
 
  html {
-	line-height: 1.1em; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.1em;
   scroll-behavior: smooth;
 }
   
@@ -40,8 +40,22 @@ main {
 * `article` contexts in Chrome, Firefox, and Safari.
 */
 
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
 h1, h2, h3, h4 {
   font-family: $got-b;
+  font-weight: bolder;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
   
 /* Grouping content
